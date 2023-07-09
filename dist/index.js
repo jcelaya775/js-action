@@ -9792,8 +9792,8 @@ module.exports = JSON.parse('[[[0,44],"disallowed_STD3_valid"],[[45,46],"valid"]
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-const core = __nccwpck_require__(2810); // provides an interface to the workflow commands, input and output variables, exit statuses, and debug messages
-const github = __nccwpck_require__(4176); // returns an authenticated Octokit REST client and access to GitHub Actions contexts
+const core = __nccwpck_require__(2810);
+const github = __nccwpck_require__(4176);
 
 try {
   // `who-to-greet` input defined in action metadata file
@@ -9805,7 +9805,6 @@ try {
   const payload = JSON.stringify(github.context.payload, undefined, 2);
   console.log(`The event payload: ${payload}`);
 } catch (error) {
-  console.log(`Oh noes! (->) ${error.message}`);
   core.setFailed(error.message);
 }
 
